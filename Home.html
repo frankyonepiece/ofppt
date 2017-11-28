@@ -130,8 +130,31 @@
         <div class="inscript row col-sm-6 w-100" style="position:sticky;display:none;margin:0 auto;">
           <form>
               <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                  <label for="email">Nom:</label>
+                  <input type="email" class="form-control" id="text" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                  <label for="pwd">Prenom:</label>
+                  <input type="password" class="form-control" id="text" placeholder="Enter password">
+              </div>
+              <div class="form-check">
+                  <label for="pwd">Sexe:</label>
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    F
+                  </label>
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option2" checked>
+                    M
+                    </label>
+              </div>
+              <div class="form-group">
+                  <label for="pwd">Date de naissance:</label>
+                  <input type="date" class="form-control" id="date" placeholder="Enter password">
+              </div>
+              <div class="form-group">
+                  <label for="pwd">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter password">
               </div>
               <div class="form-group">
                   <label for="pwd">Password:</label>
@@ -143,10 +166,9 @@
                   </label>
               </div>
               <div class="row w-100 float-sm-right">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <text class="float-sm-right" style="cursor: pointer;" id="login">Login</text>
-              </div>
-              
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <text class="float-sm-right" style="cursor: pointer;" id="login">Login</text>
+                </div>
           </form>
           </div>
 
@@ -154,13 +176,9 @@
 		$(document).ready(function(){
       $("#inscription").click(function(){
         $(".slidup").slideUp("slow",function(){
-          
-          setTimeout(function(){
-              $(".inscript").slideDown("fast",function(){
-              $(".inscript").css("display","block");  
-              });
-              
-            }, 200);
+          $(".inscript").slideDown("fast",function(){
+          $(".inscript").css("display","block");  
+          });
         });
       });
       $("#login").click(function(){
