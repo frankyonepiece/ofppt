@@ -41,7 +41,7 @@
                   <a class="nav-link" href="#">ACCUEIL</a>
                 </li>
                 <li class="nav-item" style="border-style:0px 0px 0px 2px solid #fff;">
-                  <a class="nav-link"  href="#">Filière de formation</a>
+                  <a class="nav-link"  href="filier.html">Filière de formation</a>
                 </li> 
               </ul>
               <ul class="nav navbar-nav ml-auto justify-content-end">
@@ -127,15 +127,16 @@
                 </div>
         </div>
       </br>
-        <div class="inscript row col-sm-6 w-100" style="position:sticky;display:none;margin:0 auto;">
+        <div class="inscript row col-sm-6 w-100 card" style="position:sticky;display:none;margin:0 auto;">
+          </br>
           <form>
               <div class="form-group">
                   <label for="email">Nom:</label>
-                  <input type="email" class="form-control" id="text" placeholder="Enter email">
+                  <input type="text" class="form-control" id="text" placeholder="Enter nom" required>
               </div>
               <div class="form-group">
                   <label for="pwd">Prenom:</label>
-                  <input type="password" class="form-control" id="text" placeholder="Enter password">
+                  <input type="text" class="form-control" id="text" placeholder="Enter prenom" required>
               </div>
               <div class="form-check">
                   <label for="pwd">Sexe:</label>
@@ -149,27 +150,27 @@
                     </label>
               </div>
               <div class="form-group">
+                  <label for="pwd">CIN:</label>
+                  <input type="text" class="form-control" id="text" placeholder="Enter CIN" required>
+              </div>
+              <div class="form-group">
                   <label for="pwd">Date de naissance:</label>
-                  <input type="date" class="form-control" id="date" placeholder="Enter password">
+                  <input type="date" class="form-control" id="date"  required>
               </div>
               <div class="form-group">
                   <label for="pwd">Email:</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter password">
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
               </div>
               <div class="form-group">
                   <label for="pwd">Password:</label>
-                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
               </div>
-              <div class="form-check">
-                  <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Remember me
-                  </label>
-              </div>
-              <div class="row w-100 float-sm-right">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="row text-center">
+                  <button type="submit" class="btn btn-primary col-sm-4">Next</button>
                   <text class="float-sm-right" style="cursor: pointer;" id="login">Login</text>
                 </div>
           </form>
+          <br>
           </div>
 
         <script>
@@ -182,9 +183,9 @@
         });
       });
       $("#login").click(function(){
-        $(".inscript").slideUp("fast",function(){
+        $(".inscript").slideUp("slow",function(){
           setTimeout(function(){
-              $(".slidup").slideDown("slow",function(){
+              $(".slidup").slideDown("fast",function(){
               });
               
             }, 200);
@@ -192,10 +193,10 @@
       });
 
 
-			$(".project").hover3d({
-				selector: ".project__card"
-			});
-		});
+        $(".project").hover3d({
+          selector: ".project__card"
+        });
+		  });
         $('.carousel').carousel({
             pause: false
         })        
